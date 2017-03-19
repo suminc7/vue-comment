@@ -1,7 +1,12 @@
-var express = require('express');
+const express = require('express');
 var router = express.Router();
 
 router.post('/', function(req, res){
+    console.dir(req.body.title);
+    res.json({data: 1});
+})
+
+router.post('/get', function(req, res){
     console.dir(req.body.title);
     res.json({data: 1});
 })
