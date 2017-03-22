@@ -15,15 +15,13 @@
     "express": "4.13.3",
     "mongoose": "^4.8.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
-  },
+  "repository": "https://github.com/heroku/node-js-getting-started",
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {},
+  "author": "sumin <suminc7@gmail.com>"
 }
