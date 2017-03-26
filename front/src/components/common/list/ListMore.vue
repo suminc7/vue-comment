@@ -3,10 +3,10 @@
        @click="$emit('listMore', offset + size)"
        class="list-more"
        :class="{ active: offset + size < listTotalCount }"
-    >{{ $t('common.btn_more') }}</a>
+    >More</a>
 </template>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
     #wrap .list-more.white {
         padding: 17px 0;
         background-color: white;
@@ -20,7 +20,7 @@
         }
     }
 </style>
-<script lang="babel">
+<script>
     export default {
     	props: {
 			listTotalCount: {

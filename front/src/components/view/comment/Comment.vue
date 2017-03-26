@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<script lang="babel">
+<script>
 
 import CommentHeader from './CommentHeader.vue'
 import CommentBody from './CommentBody.vue'
@@ -21,7 +21,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style>
     #comment {
         text-align: left;
         margin-top: 20px;

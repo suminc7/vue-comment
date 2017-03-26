@@ -10,7 +10,7 @@
         </template>
     </div>
 </template>
-<script lang="babel">
+<script>
 	import ListSorting from '../../common/list/ListSorting.vue'
 	import ListNothing from '../../common/list/ListNothing.vue'
 	import ListMore from '../../common/list/ListMore.vue'
@@ -56,7 +56,7 @@
     }
 </script>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
     .list-nothing {
         display: block!important;
         height: 365px;

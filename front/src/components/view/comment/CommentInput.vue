@@ -2,23 +2,23 @@
     <div class="comment-input form-group" :class="{edit: list}">
         <div class="user-thumb" :style="list ? {backgroundImage: `url(${list.profilePath})`} : {backgroundImage: `url(${epiq.profilePath})`}"></div>
         <div class="input-box">
-            <div class="input-editor" v-medium-editor="{ inserted, editableClick, editableBlur, editableInput, placeholder: $t('comment.placeholder')  }"></div>
+            <div class="input-editor" v-medium-editor="{ inserted, editableClick, editableBlur, editableInput, placeholder: 'Click here to add a public comment.'  }"></div>
             <div class="input-control cb">
                 <!--<span class="text-len"> <span class="count">{{ inputLenth }}</span> / 500</span>-->
                 <div class="btns">
                     <template v-if="list">
-                        <a href="#" @click="cancel" class="btn-modify btn-def btn-def-line-block">{{ $t('comment.cancel') }}</a>
-                        <a href="#" @click="save" class="btn-modify btn-def btn-def-black" :class="{ disable: isSubmitDisabled }">{{ $t('comment.save') }}</a>
+                        <a href="#" @click="cancel" class="btn-modify btn-def btn-def-line-block">Cancel</a>
+                        <a href="#" @click="save" class="btn-modify btn-def btn-def-black" :class="{ disable: isSubmitDisabled }">Save</a>
                     </template>
                     <template v-else>
-                        <a href="#" @click="submit" class="btn-modify btn-def btn-def-black" :class="{ disable: isSubmitDisabled }">{{ $t('comment.submit') }}</a>
+                        <a href="#" @click="submit" class="btn-modify btn-def btn-def-black" :class="{ disable: isSubmitDisabled }">Submit</a>
                     </template>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<script lang="babel">
+<script>
 	import Vue from 'vue'
 	import StringUtil from '../../../utils/String'
     import mediumEditor from '../../../directives/MediumEditor'
@@ -85,7 +85,7 @@
 </script>
 <style lang="scss">
     @import "../../../../node_modules/medium-editor/src/sass/medium-editor";
-    @import "~sass/variables";
+    @import '../../../scss/variables';
 
     .comment-input {
         &.edit {

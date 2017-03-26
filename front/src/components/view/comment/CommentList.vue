@@ -8,9 +8,9 @@
                     <span class="comment-time">{{ list.dateCreated }}</span>
                 </div>
                 <div class="comment-content-body">
-                    <div ref="text" class="text" :class="{expanded: list.expanded}"><span v-if="list.isBest" class="best">BEST</span>{{ list.deleted ? $t('comment.deleted') : message }}</div>
+                    <div ref="text" class="text" :class="{expanded: list.expanded}"><span v-if="list.isBest" class="best">BEST</span>{{ list.deleted ? 'Delete' : message }}</div>
                     <div class="toggle" v-if="list.expand">
-                        <a @click="toggleExpandComment(list.id)" href="#">{{ list.expanded ? $t('comment.showless') : $t('comment.readmore') }}</a>
+                        <a @click="toggleExpandComment(list.id)" href="#">{{ list.expanded ? 'Show less' : 'Read more' }}</a>
                     </div>
                 </div>
                 <div class="comment-content-footer">
@@ -19,12 +19,12 @@
                 </div>
                 <div class="right-actions">
                     <template v-if="!list.creator">
-                        <a href="#" @click="popup" v-if="!list.deleted">{{ $t('comment.report') }}</a>
+                        <a href="#" @click="popup" v-if="!list.deleted">Report</a>
                     </template>
                     <template v-else>
                         <template v-if="!list.deleted">
-                        <a href="#" @click="editComment({ id: list.id })">{{ $t('comment.edit') }}</a>
-                        <a href="#" @click="clickDelete()">{{ $t('comment.delete') }}</a>
+                        <a href="#" @click="editComment({ id: list.id })">Edit</a>
+                        <a href="#" @click="clickDelete()">Delete</a>
                         </template>
                     </template>
                 </div>
@@ -34,7 +34,7 @@
         </div>
     </li>
 </template>
-<script lang="babel">
+<script>
 
 	import Vue from 'vue'
 	import { mapGetters, mapActions } from 'vuex'
@@ -60,7 +60,7 @@
 				'openCommentReport'
 			]),
 			clickDelete(){
-				if( confirm(this.$t('comment.delete_btn')) ){
+				if( confirm('삭제') ){
 					this.deleteComment({ id: this.list.id, status: commentTypes.USER_DELETE });
 				}
             },
@@ -105,7 +105,7 @@
     }
 </script>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
 
     .comment-list {
         &:hover {

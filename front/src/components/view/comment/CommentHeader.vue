@@ -1,10 +1,10 @@
 <template>
     <div class="comment-header">
-        <div class="comment-total-count">{{ $t('comment.count_header') }} {{ listTotalCount | number }}{{ $t('comment.count_footer') }}</div>
+        <div class="comment-total-count">Comments {{ listTotalCount | number }}</div>
         <comment-input></comment-input>
     </div>
 </template>
-<script lang="babel">
+<script>
     import CommentInput from './CommentInput.vue'
     import { mapGetters } from 'vuex'
 
@@ -26,7 +26,7 @@
     }
 </script>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
 
     .comment-header {
         padding: 32px;

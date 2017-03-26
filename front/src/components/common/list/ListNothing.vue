@@ -8,7 +8,7 @@
         </div>
     </div>
 </template>
-<script lang="babel">
+<script>
     export default {
     	props: {
     	    listType: {
@@ -18,14 +18,14 @@
         data() {
             return {
 				messages: {
-					comment: this.$t('comment.list_nothing'),
+					comment: 'There are no comments yet. Be the first to comment!',
 				}
             }
         }
     }
 </script>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
     .list-nothing {
         display: block!important;
         height: 365px;

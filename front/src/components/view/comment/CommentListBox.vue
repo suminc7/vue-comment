@@ -10,7 +10,7 @@
 </template>
 <style lang="scss">
 </style>
-<script lang="babel">
+<script>
 	import ListBox from '../../common/list/ListBox.vue'
 	import CommentList from './CommentList.vue'
 	import CommentInput from './CommentInput.vue'

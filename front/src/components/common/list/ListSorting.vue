@@ -11,7 +11,7 @@
 <style lang="scss">
 
 </style>
-<script lang="babel">
+<script>
 
     import _ from 'lodash'
     import * as orderTypes from '../../../store/order-types'
@@ -29,9 +29,9 @@
         data() {
 
 			const items = {
-				[orderTypes.RECENTLY]: this.$t('common.sort_newest'),
-				[orderTypes.POPULAR]: this.$t('common.sort_hottest'),
-				[orderTypes.TITLE]: this.$t('common.sort_name')
+				[orderTypes.RECENTLY]: 'Newest',
+				[orderTypes.POPULAR]: 'Hottest',
+				[orderTypes.TITLE]: 'A-Z'
 			};
 
             return {

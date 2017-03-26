@@ -14,7 +14,7 @@
         }
     }
 </style>
-<script lang="babel">
+<script>
     import CommentListBox from './CommentListBox.vue';
 
     export default{

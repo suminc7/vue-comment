@@ -4,7 +4,7 @@
         <comment-report-complete v-if="type === 'SUBMIT_COMMENT_REPORT'"></comment-report-complete>
     </div>
 </template>
-<script lang="babel">
+<script>
     import CommentReport from './CommentReport.vue'
     import CommentReportComplete from './CommentReportComplete.vue'
 	import { mapGetters, mapActions, mapState } from 'vuex'
@@ -33,7 +33,7 @@
     }
 </script>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
 
     #popup {
         text-align: left;

@@ -9,29 +9,29 @@ const config = {
 
 export default {
 	fetchCommentLists (params) {
-		return Vue.axios.get(`/comment/list?${qs.stringify(params)}`)
+		return Vue.axios.get(`/api/comments/list?${qs.stringify(params)}`)
 	},
 	newComment(params){
-		return Vue.axios.post(`/comment/new`, qs.stringify(params), config)
+		return Vue.axios.post(`/api/comments/new`, qs.stringify(params), config)
 	},
 	modifyComment({ id, comment }){
 		return Vue.axios.request({
 			method: 'PUT',
-			url: `/comment/modify/${id}`,
+			url: `/api/comments/modify/${id}`,
 			data: {comment}
 		})
 	},
 	deleteComment({ id, status }){
 		return Vue.axios.request({
 			method: 'DELETE',
-			url: `/comment/delete/${id}`,
+			url: `/api/comments/delete/${id}`,
 			data: {status}
 		})
 	},
 	likeComment({ id, commentType, currentOpinionType, likeType }){
 		return Vue.axios.request({
 			method: 'PUT',
-			url: `/comment/opinion/${id}`,
+			url: `/api/comments/opinion/${id}`,
 			data: {
 				commentType,
 				currentOpinionType,

@@ -1,6 +1,6 @@
 
 
-const moment = window.moment;
+import moment from 'moment';
 const lang = epiq.lang;
 
 /**

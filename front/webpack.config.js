@@ -1,12 +1,12 @@
 const config = require('./config');
 const path = require('path');
 const webpack = require('webpack');
-
+console.log(config.staticRoot)
 module.exports = {
 	entry: ['./src/view.comment.js'],
 	output: {
 		path: config.staticRoot,
-		filename: '/js/view.comment.js'
+		filename: './js/view.comment.js'
 	},
 	module: {
 		rules: [

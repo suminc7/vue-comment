@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<script lang="babel">
+<script>
 	import { mapGetters, mapActions } from 'vuex'
 
     export default {
@@ -33,7 +33,7 @@
     }
 </script>
 <style lang="scss">
-    @import '~sass/variables';
+    @import '../../../scss/variables';
 
     .popup.comment-report {
         width: 580px;
